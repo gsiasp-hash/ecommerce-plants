@@ -1,44 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #FEFAE0;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefae0;
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "aside"
+  "main"
+  "footer";
 }
 .navegacion {
-   display: none;
+  display: none;
 }
 nav {
-    background-color: #606C38;
-    padding: 10px;
+    grid-area: header;
+  background-color: #606c38;
+  padding: 20px;
+  text-align: center;
 }
 nav h1 {
-    color: #FEFAE0;
-    font-size: 1.6rem;
-    margin: 0;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
 }
 aside {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    text-align: center;
+    grid-area: aside;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 aside h2 {
-    color: #606C38;
-    font-size: 1.4rem;
-    margin: 16px 0px 0px 0px;
-    
+  color: black;
+  font-size: 1.4rem;
+  margin: 16px 0px 0px 0px;
+}
+aside p {
+  color: black;
+  font-size: 0.8rem;
+  margin: 8px 16px;
+}
+#category {
+  border: 1px solid #606c38;
+  border-radius: 10px;
+  margin: 10px;
+  width: 200px;
+  height: 30px;
+}
+main {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .card {
-    background-color: #DDA15E;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    margin: 16px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdf2e4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 16px;
+  width: 30rem;
 }
 .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+footer {
+    grid-area: footer;
+  background-color: #606c38;
+  color: #fefae0;
+  text-align: center;
+  padding: 10px;
 }
