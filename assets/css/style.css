@@ -12,6 +12,7 @@ body {
     "main"
     "footer";
 }
+/* header */
 .navegacion {
   display: none;
 }
@@ -19,7 +20,9 @@ nav {
   grid-area: header;
   background-color: #606c38;
   padding: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 nav h1 {
   color: white;
@@ -27,6 +30,7 @@ nav h1 {
   font-weight: 700;
   margin: 0;
 }
+/* menu lateral */
 aside {
   grid-area: aside;
   display: flex;
@@ -48,25 +52,25 @@ aside p {
 #category {
   border: 1px solid #606c38;
   border-radius: 10px;
-  margin: 10px;
-  width: 200px;
-  height: 30px;
 }
+/* area productos */
 main {
   grid-area: main;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 16px;
+  padding: 16px;
   justify-content: center;
 }
+/* Cards */
 .card {
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
   align-items: center;
-  background-color: #fef7c1;
+  background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding: 16px;
   margin: 16px;
   width: 18rem;
   height: auto;
@@ -76,7 +80,6 @@ main {
   height: 400px;
   margin: 0;
   object-fit: cover;
-  border-radius: 12px;
 }
 .card h3 {
   margin: 12px 0 8px 0;
@@ -99,6 +102,8 @@ main {
   border-radius: 20px;
   padding: 15px 30px;
   cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 footer {
   grid-area: footer;
